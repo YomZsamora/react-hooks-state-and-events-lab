@@ -5,8 +5,7 @@ function Item({ name, category }) {
    const [inCart, setClassName] = useState(false);
 
    function addToCart() {
-      const selectedItem = !inCart;
-      setClassName(selectedItem)
+      setClassName(() => !inCart)
    }
 
   return (
